@@ -1,5 +1,3 @@
-document.writeln("<script async src=\'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\'></script>");
-
 document.writeln("<div style=\'text-align:center;overflow: hidden;\'>");
 document.writeln("<ins class=\'adsbygoogle\'");
 document.writeln("     style=\'display:inline-block;width:728px;height:90px\'");
