@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://smalltool.github.io/guestbook/index.html">
 <meta property="og:site_name" content="仿站小工具 - 官方网站">
 <meta property="og:description" content="雁过留声，人过留名……">
-<meta property="og:updated_time" content="2017-03-12T12:54:09.360Z">
+<meta property="og:updated_time" content="2017-03-12T12:32:40.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="留言板">
 <meta name="twitter:description" content="雁过留声，人过留名……">
@@ -128,10 +128,12 @@
 	</article>
 	
 	
-<section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="guestbook/index.html" data-title="留言板" data-url="https://smalltool.github.io/guestbook/index.html"></div>
-</section>
 
+<section id="comments" class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </div>  
         </div>
@@ -253,18 +255,26 @@ $(document).ready(function(){
 
 
 
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"smalltool"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
 
+<script type="text/javascript">
+
+var disqus_shortname = 'smalltool-1';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
 
