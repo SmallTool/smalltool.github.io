@@ -26,4 +26,6 @@
         $('html, body').animate({scrollTop:0}, scrollSpeed); return false; 
     });
 
+    $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank');
+    $('a[href="https://wschool.github.io/"]').attr('target', '_blank');
 })(jQuery);
