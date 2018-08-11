@@ -26,6 +26,6 @@
         $('html, body').animate({scrollTop:0}, scrollSpeed); return false; 
     });
 
-    $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#c00"});
-    $('a[href="https://wschool.github.io/"]').attr('target', '_blank');
+    $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
+    $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
 })(jQuery);
