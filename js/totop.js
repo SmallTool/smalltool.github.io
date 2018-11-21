@@ -28,4 +28,7 @@
 
     $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
     $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
+
+    $(".ourWxhao").text("Tonylee899").css({"color":'#333'});
+    $(".ourQqhao").text("978478090").css({"color":'#333'});
 })(jQuery);
