@@ -29,6 +29,10 @@
     $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
     $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
 
-    $(".ourWxhao").text("Tonylee899").css({"color":'#333'});
-    $(".ourQqhao").text("978478090").css({"color":'#333'});
+    $.get('http://smalltool.fzxgj.top/json.html', function(res){
+        var obj = JSON.parse(res);
+        $(".ourWxhao").text(obj.Wechat).css({"color":'#333'});
+        $(".ourQqhao").text(obj.QQ).css({"color":'#333'});
+    });
+    
 })(jQuery);
