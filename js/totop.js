@@ -29,10 +29,14 @@
     $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
     $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
 
-    $.get('http://smalltool.fzxgj.top/json.html', function(res){
-        var obj = JSON.parse(res);
-        $(".ourWxhao").text(obj.Wechat).css({"color":'#333'});
-        $(".ourQqhao").text(obj.QQ).css({"color":'#333'});
+    $.ajax({
+        url:"http://smalltool.fzxgj.top/jsonp.html",
+        dataType :'JSONP',
+        jsonpCallback:"localhandler",
+        contentType: "application/json;charset=utf-8",
+        success: function (res) {
+            $(".ourWxhao").text(res.Wechat).css({"color":'#333'});
+            $(".ourQqhao").text(res.QQ).css({"color":'#333'});
+        }
     });
-    
 })(jQuery);
