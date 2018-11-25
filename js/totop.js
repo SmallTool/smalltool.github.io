@@ -30,7 +30,7 @@
     $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
 
     $.ajax({
-        url:"http://smalltool.fzxgj.top/jsonp.html",
+        url:"/jsonp.html",
         dataType :'JSONP',
         jsonpCallback:"localhandler",
         contentType: "application/json;charset=utf-8",
