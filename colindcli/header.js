@@ -5,5 +5,6 @@ document.writeln("     data-ad-client=\'ca-pub-2222513431618339\'");
 document.writeln("     data-ad-slot=\'8930471380\'></ins>");
 document.writeln("</div>");
 
-
-(adsbygoogle = window.adsbygoogle || []).push({});
+document.writeln("<script>");
+document.writeln("(adsbygoogle = window.adsbygoogle || []).push({});");
+document.writeln("</script>");

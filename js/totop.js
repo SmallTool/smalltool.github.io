@@ -26,7 +26,7 @@
         $('html, body').animate({scrollTop:0}, scrollSpeed); return false; 
     });
 
-    $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
+    // $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
     $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
 
     $.ajax({
@@ -36,7 +36,7 @@
         contentType: "application/json;charset=utf-8",
         success: function (res) {
             $(".ourWxhao").text(res.Wechat).css({"color":'#333'});
-            $(".ourQqhao").html('<a href="http://wpa.qq.com/msgrd?v=3&uin='+res.QQ+'&site=qq&menu=yes" target="_blank" style="color: rgb(51, 51, 51);">'+res.QQ+'</a>').css({"color":'#333'});
+            $(".ourQqhao").text(res.QQ).css({"color":'#333'});
         }
     });
 })(jQuery);
