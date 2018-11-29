@@ -418,15 +418,21 @@ body >header a {
 }
 #imglogo img {
   width: 4em;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
 }
 @media only screen and (min-width: 768px) {
   #imglogo img {
     width: 5em;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
   }
 }
 @media only screen and (min-width: 1024px) {
   #imglogo img {
     width: 5.5em;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
   }
 }
 #textlogo {
@@ -455,6 +461,7 @@ body >header a {
 #textlogo h2.blog-motto {
   font-size: 0.7em;
   font-weight: normal;
+  color: #baf5ff;
 }
 @media only screen and (min-width: 768px) {
   #textlogo h2.blog-motto {
@@ -463,7 +470,7 @@ body >header a {
 }
 @media only screen and (min-width: 1024px) {
   #textlogo h2.blog-motto {
-    font-size: 110%;
+    font-size: 100%;
   }
 }
 .navbar {
