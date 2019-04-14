@@ -225,7 +225,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
 		
 		<a href="/pingjia/" target="_blank" title="admin">admin</a>
 		
@@ -294,8 +294,18 @@ $(document).ready(function(){
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script src="/js/animate.js"></script>
+<script src="/js/fixto.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
+  if($(window).width()>768){
+    $('#asidepart').fixTo('body', {
+        top: 32,
+        className : 'myrightad',
+        mindBottomPadding: false,
+        useNativeSticky: false
+    });
+  }
+  
   $('.article-content').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox')) return;
