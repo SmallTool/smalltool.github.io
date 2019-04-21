@@ -26,7 +26,7 @@
         $('html, body').animate({scrollTop:0}, scrollSpeed); return false; 
     });
 
-    // $('a[href="http://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
+    // $('a[href="https://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
     $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
 
     $.ajax({
