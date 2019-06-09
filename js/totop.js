@@ -26,8 +26,9 @@
         $('html, body').animate({scrollTop:0}, scrollSpeed); return false; 
     });
 
-    // $('a[href="https://www.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
-    $('a[href="http://w3schools.fzxgj.top/"]').attr('target', '_blank').css({"color": "#43ff4b"});
+    $('a[href="https://www.fzxgj.top/"]').attr('target', '_blank');
+    $('a[href="https://xft.fzxgj.top/"]').attr('target', '_blank');
+    $('#asidepart').css({'zIndex': 999999});
 
     $.ajax({
         url:"/jsonp.html",
