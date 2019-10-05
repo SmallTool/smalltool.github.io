@@ -148,6 +148,7 @@
       margin-bottom: 8px;
       background: #ffd2c4;
       cursor: pointer;
+      display: block;
     }
 
     .adlist:hover {
@@ -158,19 +159,21 @@
 
     .adword {
       position: relative;
-      top: -72px;
+      top: -98px;
       float: right;
-      color: #ccc;
-      background: #eee;
+      color: #9E9E9E;
+      background: #ccc;
       padding: 0 5px;
+      right: 12px;
+      font-size: 14px;
     }
   </style>
   <script>
-    document.writeln("<div class=\'adlist\' onclick=\'javascript:window.open(\'https\/\/://www.xftsoft.com/\');\'>");
+    document.writeln("<a href=\'https://www.xftsoft.com/\' target=\'_blank\' class=\'adlist\'>");
     document.writeln("    <div><h1 style=\'color: #000;\'>【软件】小飞兔整站下载</h1></div>");
     document.writeln("    <div style=\'margin-left: 13px;\'>输入一个网址就能下载一个网站</div>");
-    document.writeln("    <div class=\'adword\'>广告</div>");
-    document.writeln("  </div>");
+    document.writeln("    <a href=\'https://www.xftsoft.com/\' class=\'adword\'>广告</a>");
+    document.writeln("  </a>");
   </script>
 
   
