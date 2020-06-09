@@ -26,8 +26,8 @@
         $('html, body').animate({scrollTop:0}, scrollSpeed); return false; 
     });
 
-    $('a[href="https://www.fzxgj.top/"]').attr('target', '_blank');
     $('a[href="https://www.xftsoft.com/"]').attr('target', '_blank');
+    $('a[href="https://xftsoft.com/"]').attr('target', '_blank');
     $('a[href="https://www.kuxuanzhan.com/"]').attr('target', '_blank');
     $('a[href="https://dewangrong.com/"]').attr('target', '_blank');
     $('#asidepart').css({'zIndex': 999999});
