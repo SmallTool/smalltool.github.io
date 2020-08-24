@@ -1,0 +1,651 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+
+    
+      <title>“请求被中止 未能创建 SSL/TLS 安全通道” 的原因及解决办法 | 仿站小工具 v10.6</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <meta name="author" content="admin">
+    
+
+    
+
+    
+      <meta name="description" content="描述：请求被中止: 未能创建 SSL/TLS 安全通道。Could not create SSL/TLS secure channel。 产生平台：Windows Server 2012，Windows 7 Service Pack 1（SP1）和Windows Server 2008 R2 SP1  解决办法一：在HttpWebRequest前设置代码 ServicePointManager.">
+<meta name="keywords" content="问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“请求被中止 未能创建 SSL&#x2F;TLS 安全通道” 的原因及解决办法">
+<meta property="og:url" content="/2020/08/24/Could-not-create-SSL-TLS-secure-channel/index.html">
+<meta property="og:site_name" content="仿站小工具 v10.6">
+<meta property="og:description" content="描述：请求被中止: 未能创建 SSL/TLS 安全通道。Could not create SSL/TLS secure channel。 产生平台：Windows Server 2012，Windows 7 Service Pack 1（SP1）和Windows Server 2008 R2 SP1  解决办法一：在HttpWebRequest前设置代码 ServicePointManager.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-24T08:26:47.373Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="“请求被中止 未能创建 SSL&#x2F;TLS 安全通道” 的原因及解决办法">
+<meta name="twitter:description" content="描述：请求被中止: 未能创建 SSL/TLS 安全通道。Could not create SSL/TLS secure channel。 产生平台：Windows Server 2012，Windows 7 Service Pack 1（SP1）和Windows Server 2008 R2 SP1  解决办法一：在HttpWebRequest前设置代码 ServicePointManager.">
+    
+
+    
+    <link rel="alternative" href="/atom.xml" title="仿站小工具 v10.6" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <header>
+      
+<div>
+    
+        <div id="imglogo">
+            <a href="/"><img src="/img/logo.png" alt="仿站小工具 v10.6" title="仿站小工具 v10.6"/></a>
+        </div>
+        
+            <div id="textlogo">
+                <h1 class="site-name">
+                    <a href="/" title="仿站小工具 v10.6">
+                        仿站小工具 v10.6
+                    </a>
+                </h1>
+                <h2 class="blog-motto">
+                    
+                        下载网页模板软件、仿站工具！
+                            
+                </h2>
+            </div>
+            <div class="navbar">
+                <a class="navbutton navmobile" href="#" title="菜单">
+                </a>
+            </div>
+            <nav class="animated">
+                <ul>
+                    <ul>
+                        
+                            <li>
+                                <a href="/" target="_self">
+                                    首页
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/archives/" target="_self">
+                                    文章
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/jiaocheng/" target="_self">
+                                    教程
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://www.dewangrong.com/" target="_self">
+                                    库存系统
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/bug/" target="_self">
+                                    提交BUG
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/guestbook/" target="_self">
+                                    留言板
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/donate/" target="_self">
+                                    打赏
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/about/" target="_self">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                <li>
+                                    
+                                                    <form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+                                                        <label>Search</label>
+                                                        <input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+                                                        <input type="hidden" name="q" value="site:">
+                                                    </form>
+                                                    
+                                </li>
+                    </ul>
+            </nav>
+</div>
+<script src="/colindcli/header.js"></script>
+
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2020/08/24/Could-not-create-SSL-TLS-secure-channel/" title="“请求被中止 未能创建 SSL/TLS 安全通道” 的原因及解决办法" itemprop="url">“请求被中止 未能创建 SSL/TLS 安全通道” 的原因及解决办法</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="admin" target="_blank" itemprop="author">admin</a>
+		
+  <p class="article-time">
+    <time datetime="2020-08-24T10:00:00.000Z" itemprop="datePublished"> 发表于 2020-08-24</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		<script src="/colindcli/content-top.js"></script>
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法一："><span class="toc-number">1.</span> <span class="toc-text">解决办法一：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法二"><span class="toc-number">2.</span> <span class="toc-text">解决办法二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新补丁"><span class="toc-number">2.1.</span> <span class="toc-text">更新补丁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置默认值"><span class="toc-number">2.2.</span> <span class="toc-text">设置默认值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证系统"><span class="toc-number">2.3.</span> <span class="toc-text">验证系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法三"><span class="toc-number">3.</span> <span class="toc-text">解决办法三</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他参考内容"><span class="toc-number">4.</span> <span class="toc-text">其他参考内容</span></a></li></ol>
+		
+		</div>
+		
+		<blockquote>
+<p>描述：请求被中止: 未能创建 SSL/TLS 安全通道。Could not create SSL/TLS secure channel。</p>
+<p>产生平台：Windows Server 2012，Windows 7 Service Pack 1（SP1）和Windows Server 2008 R2 SP1</p>
+</blockquote>
+<h2 id="解决办法一：">解决办法一：</h2><p>在HttpWebRequest前设置代码</p>
+<p>ServicePointManager.Expect100Continue = true;</p>
+<p>ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;</p>
+<p>ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) =&gt; true;</p>
+<h2 id="解决办法二">解决办法二</h2><ul>
+<li>上面的方法没有效果，则为系统层面的问题了，对照你现在使用的系统更新系统补丁</li>
+</ul>
+<p>更新以将TLS 1.1和TLS 1.2启用为Windows中WinHTTP中的默认安全协议，此更新提供对Windows Server 2012，Windows 7 Service Pack 1（SP1）和Windows Server 2008 R2 SP1中的传输层安全性（TLS）1.1和TLS 1.2的支持，参考官方文档<a href="https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-wi" target="_blank" rel="external">https://support.microsoft.com/en-us/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-wi</a></p>
+<h3 id="更新补丁">更新补丁</h3><ul>
+<li>KB3140245：<a href="http://www.catalog.update.microsoft.com/search.aspx?q=kb3140245" target="_blank" rel="external">http://www.catalog.update.microsoft.com/search.aspx?q=kb3140245</a></li>
+</ul>
+<h3 id="设置默认值">设置默认值</h3><ul>
+<li>在SChannel组件级别的Windows 7上启用TLS 1.1和1.2 （采用以下2.1或2.2一种更新）</li>
+</ul>
+<p>2.1、微软安装更新注册表：<a href="http://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi" target="_blank" rel="external">http://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi</a></p>
+<p>2.2、手动更新注册表，复制下面注册表代码导入到注册表。新建txt，将后缀txt改为reg（注册表项），导入（导入之前做备份）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp]</div><div class="line">&quot;DefaultSecureProtocols&quot;=dword:00000800</div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp]</div><div class="line">&quot;DefaultSecureProtocols&quot;=dword:00000800</div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client]</div><div class="line">&quot;DisabledByDefault&quot;=dword:00000000</div><div class="line">&quot;Enabled&quot;=dword:00000001</div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server]</div><div class="line">&quot;DisabledByDefault&quot;=dword:00000000</div><div class="line">&quot;Enabled&quot;=dword:00000001</div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client]</div><div class="line">&quot;DisabledByDefault&quot;=dword:00000000</div><div class="line">&quot;Enabled&quot;=dword:00000001</div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server]</div><div class="line">&quot;DisabledByDefault&quot;=dword:00000000</div><div class="line">&quot;Enabled&quot;=dword:00000001</div></pre></td></tr></table></figure>
+<h3 id="验证系统">验证系统</h3><ul>
+<li>验证系统是否支持TLS1.2、TLS1.3</li>
+</ul>
+<p>PowerShell打开：</p>
+<p><a href=":SecurityProtocol">Net.ServicePointManager</a>::SecurityProtocol = [Net.SecurityProtocolType]::Ssl3 -bor [Net.SecurityProtocolType]::Tls -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls12</p>
+<h2 id="解决办法三">解决办法三</h2><ul>
+<li>前面两种办法都不行，只能使用终极办法，升级系统到windows 10。</li>
+</ul>
+<h2 id="其他参考内容">其他参考内容</h2><p><a href="https://blogs.perficient.com/2016/04/28/tsl-1-2-and-net-support/" target="_blank" rel="external">https://blogs.perficient.com/2016/04/28/tsl-1-2-and-net-support/</a></p>
+<p>存在解决方案，但是它们取决于框架版本：</p>
+<p>.NET 4.6及更高版本。您无需执行任何其他工作即可支持TLS 1.2，默认情况下支持该功能。</p>
+<p>.NET 4.5。支持TLS 1.2，但它不是默认协议。您需要选择使用它。以下代码将TLS 1.2设置为默认值，请确保在连接到安全资源之前执行它：<br>ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12</p>
+<p>.NET 4.0。不支持TLS 1.2，但是如果系统上安装了.NET 4.5（或更高版本），那么即使您的应用程序框架不支持TLS 1.2，您仍然可以选择使用TLS 1.2。唯一的问题是.NET 4.0中的SecurityProtocolType没有TLS1.2的条目，因此我们必须使用此枚举值的数字表示形式：<br>ServicePointManager.SecurityProtocol =（SecurityProtocolType）3072;</p>
+<p>.NET 3.5或更低版本。不支持TLS 1.2（*），并且没有解决方法。将您的应用程序升级到该框架的最新版本。</p>
+<p>PS对于场景3，还有一个注册表黑客，默认情况下会强制4.5使用TLS 1.2，而无需以编程方式强制执行。<br>PPS正如Microsoft的Christian Pop在下面提到的那样，.NET 3.5有一个可用的最新补丁程序，它启用了TLS1.2支持。<br>请参阅：<br>KB3154518 – Reliability Rollup HR-1605 – NDP 2.0 SP2 – Win7 SP1/Win 2008 R2 SP1<br>KB3154519 – Reliability Rollup HR-1605 – NDP 2.0 SP2 – Win8 RTM/Win 2012 RTM<br>KB3154520 – Reliability Rollup HR-1605 – NDP 2.0 SP2 – Win8.1RTM/Win 2012 R2 RTM<br>KB3156421 -1605 HotFix Rollup through Windows Update for Windows 10.</p>
+  
+		<script src="/colindcli/content-bottom.js"></script>
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/仿站问题/">仿站问题</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/问题/">问题</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="/2020/08/24/Could-not-create-SSL-TLS-secure-channel/" data-title="“请求被中止 未能创建 SSL/TLS 安全通道” 的原因及解决办法 | 仿站小工具 v10.6" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2020/07/25/xft10.0/"  title="【软件】小飞兔下载V10.0 下载">
+ <strong>下一篇：</strong><br/> 
+ <span>【软件】小飞兔下载V10.0 下载
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside">
+    <a class="navbutton" href="#" title="显示侧边栏"></a>
+</div>
+
+    <div id="toc" class="toc-aside">
+        <strong class="toc-title">文章目录</strong>
+        
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法一："><span class="toc-number">1.</span> <span class="toc-text">解决办法一：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法二"><span class="toc-number">2.</span> <span class="toc-text">解决办法二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新补丁"><span class="toc-number">2.1.</span> <span class="toc-text">更新补丁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置默认值"><span class="toc-number">2.2.</span> <span class="toc-text">设置默认值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证系统"><span class="toc-number">2.3.</span> <span class="toc-text">验证系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法三"><span class="toc-number">3.</span> <span class="toc-text">解决办法三</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他参考内容"><span class="toc-number">4.</span> <span class="toc-text">其他参考内容</span></a></li></ol>
+                        
+    </div>
+    
+        <div id="asidepart">
+            <div class="closeaside">
+                <a class="closebutton" href="#" title="隐藏侧边栏"></a>
+            </div>
+            <aside class="clearfix">
+
+                <div class="categorieslist myad" style="box-shadow: 0 -1px 16px 6px #9E9E9E;padding: 17px;margin-left: -17px;margin-top: 4px;">
+                    <p class="asidetitle" style="height:35px;  ">
+                        <div id="dcad" style="  position: relative;
+                top: -35px;
+                color: #000000;
+                font-weight: bold;">软件定做</div>
+                    </p>
+                    <ul>
+                        <div id="dcadText" style="color: #555;font-size: 14px;margin-top: -15px;">
+                            <p><img src="/files/chat.png" style="border: 1px solid #ccc; width: 100%;" title="扫码加我微信" /></p>
+                            <!-- <p style="color: #000;">微信号:<span class="ourWxhao" style="margin-left: 8px;font-family: sans-serif;"> -->
+                            <!-- <img src="data:image/jpeg;base64,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" /> -->
+                            <!-- </span></p> -->
+                            <p style="color: #000;">
+                                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=978478090&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:978478090:51" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+                            </p>
+                        </div>
+
+                    </ul>
+                </div>
+
+                <!-- <div class="categorieslist">
+                    <p class="asidetitle">加QQ群</p>
+                    <ul>
+                        <li style="margin: 8px 0; padding: 8px 0;">
+                            <p><img src="/files/qqqun.png" style="border: 1px solid #ccc; max-width: 150px; margin-left: 0.5em;" title="手机QQ扫码加群" /></p>
+                            <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=4ad828e730495d4af784f912e3517149774811274028aba8044dcf5b27056d05"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="网站开发建设-3" title="网站开发建设-3"></a>
+                        </li>
+                    </ul>
+                </div> -->
+
+                <div>
+                </div>
+
+                <!-- <div class="categorieslist">
+                    <ul>
+                        <a href="/wxpf/" rel="nofollow">
+                            <img src="/img/wxpofeng.gif" style="width: 100%;" />
+                        </a>
+                    </ul>
+                </div> -->
+
+                
+                    
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/HTTPS/" title="HTTPS">HTTPS<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/仿站登录/" title="仿站登录">仿站登录<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/仿站问题/" title="仿站问题">仿站问题<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/修改网站编码/" title="修改网站编码">修改网站编码<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/更新/" title="更新">更新<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/网站翻译/" title="网站翻译">网站翻译<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/软件/" title="软件">软件<sup>19</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+                        
+                    
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/仿站小工具/" title="仿站小工具">仿站小工具<sup>12</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/小飞兔整站下载/" title="小飞兔整站下载">小飞兔整站下载<sup>9</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/仿站小工具-V8-0/" title="仿站小工具 V8.0">仿站小工具 V8.0<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/仿站小工具-V7-0/" title="仿站小工具 V7.0">仿站小工具 V7.0<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网站编码/" title="网站编码">网站编码<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/问题/" title="问题">问题<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/网站翻译/" title="网站翻译">网站翻译<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+                        
+                    <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://smalltool.readthedocs.org/zh_CN/master/" target="_blank" title="软件教程V4.0">软件教程V4.0</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.xftsoft.com/" target="_blank" title="小飞兔整站下载">小飞兔整站下载</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.dewangrong.com/" target="_blank" title="进存销系统">进存销系统</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="/categories/软件/" target="_blank" title="软件下载">软件下载</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="/tools/" target="_blank" title="实用工具">实用工具</a>
+            
+          </li>
+        
+    </ul>
+</div>
+                        
+            </aside>
+        </div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 百度搜索【仿站】【仿站工具】【仿站小工具】等关键词可以找到本站 <br/>
+			</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/pingjia/" target="_blank" title="admin">admin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/animate.js"></script>
+<script src="/js/fixto.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  if($(window).width()>768){
+    $('#asidepart').fixTo('body', {
+        top: 32,
+        className : 'myrightad',
+        mindBottomPadding: false,
+        useNativeSticky: false
+    });
+  }
+  
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+        
+            <script>
+                var _hmt = _hmt || [];
+                (function() {
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?27ad5d7b9f50edaf35ae1bd7c2b6c580";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            </script>
+            
+
+                
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
