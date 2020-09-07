@@ -36,7 +36,7 @@ $(function() {
         },
         text: function() {
             var self = this;
-            $('#dcadText').animateCss('bounceInDown', function() {
+            $('.myad').animateCss('bounceInLeft', function() {
                 setTimeout(function() {
                     self.title();
                 }, 1800);
