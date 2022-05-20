@@ -165,23 +165,13 @@
         }
     </style>
 
-    <script>
-        document.writeln("<section class=\'post clearfix\' itemscope=\'\' itemprop=\'blogitem\'>");
-        document.writeln("  <a href=\'/2021/08/21/download/\' class=\"adfl\" title=\'【软件】仿站小工具 V10.6 | 小飞兔整站下载 V17.0\' itemprop=\'url\'>");
-        document.writeln("  <h1 itemprop=\'name\'>【软件】仿站小工具 V10.6 | 小飞兔整站下载 V17.0</h1>");
-        document.writeln("         <p itemprop=\'description\'>通过网址下载静态网页的仿站工具，适用于SEO、前端人员的高效仿站工具。在仿站小工具输入网址一键下载页面相关素材并自动修正代码链接，按分类保存到不同目录中。 </p>");
-        document.writeln("  <time datetime=\'2020-07-25T12:00:00.000Z\' itemprop=\'datePublished\'>2020-06-10</time>");
-        document.writeln("</a>");
-        document.writeln("</section>");
-        
-        document.writeln("<section class=\'post clearfix\' itemscope=\'\' itemprop=\'blogitem\'>");
-        document.writeln("  <a href=\'/2021/03/11/mall/\' class=\"adfl\" title=\'【系统】微商城系统 | 在线销售系统\' itemprop=\'url\'>");
-        document.writeln("  <h1 itemprop=\'name\'>【系统】微商城系统 | 在线销售系统</h1>");
-        document.writeln("         <p itemprop=\'description\'>支持电脑端和手机端的响应式网站，可以在浏览器/微信/QQ等应用打开，支持多品种/多选购类型，支持支付宝/微信在线支付，也支持在线订购线下支付。</p>");
-        document.writeln("  <time datetime=\'2021-03-11T12:00:00.000Z\' itemprop=\'datePublished\'>2021-03-11</time>");
-        document.writeln("</a>");
-        document.writeln("</section>");
-    </script>
+  <section class="post clearfix" itemscope="" itemprop="blogitem">
+    <a href="/2021/08/21/download/" class="adfl" title="【软件】仿站小工具 V10.6 | 小飞兔整站下载 V17.0" itemprop="url">
+        <h1 itemprop="name">【软件】仿站小工具 V10.6 | 小飞兔整站下载 V17.0</h1>
+            <p itemprop="description">通过网址下载静态网页的仿站工具，适用于SEO、前端人员的高效仿站工具。在仿站小工具输入网址一键下载页面相关素材并自动修正代码链接，按分类保存到不同目录中。 </p>
+        <time datetime="2020-07-25T12:00:00.000Z" itemprop="datePublished">2020-06-10</time>
+    </a>
+  </section>
 
     
         
@@ -767,13 +757,13 @@ V10.6更新记录
         
           <li>
             
-            	<a href="https://www.dewangrong.com/" target="_blank" title="海鸥订单管理系统">海鸥订单管理系统</a>
+            	<a href="https://www.gftms.cn/" target="_blank" title="海鸥外贸商城系统">海鸥外贸商城系统</a>
             
           </li>
         
           <li>
             
-            	<a href="https://www.gftms.cn/" target="_blank" title="海鸥外贸商城系统">海鸥外贸商城系统</a>
+            	<a href="https://www.dewangrong.com/" target="_blank" title="海鸥订单管理系统">海鸥订单管理系统</a>
             
           </li>
         
@@ -886,6 +876,12 @@ $(document).ready(function(){
 $(document).ready(function(){ 
   if($(window).width()>768){
     $('#asidepart').fixTo('body', {
+        top: 32,
+        className : 'myrightad',
+        mindBottomPadding: false,
+        useNativeSticky: false
+    });
+    $('#toc').fixTo('body', {
         top: 32,
         className : 'myrightad',
         mindBottomPadding: false,
