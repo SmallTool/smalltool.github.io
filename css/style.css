@@ -1554,6 +1554,7 @@ section.comment {
   line-height: 1.3em;
   font-size: 0.8em;
   float: right;
+  z-index: 999999999;
 }
 #toc .toc {
   padding: 0;
