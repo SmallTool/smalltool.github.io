@@ -43,7 +43,7 @@
 
 
     <script>var _hmt = _hmt || [];</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2222513431618339" crossorigin="anonymous"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2222513431618339" crossorigin="anonymous"></script> -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="generator" content="Hexo 6.1.0"></head>
     <body>
@@ -223,7 +223,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2024 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2025 
 		
 		<a href="/pingjia/" target="_blank" title="admin">admin</a>
 		
@@ -311,7 +311,7 @@ $(document).ready(function(){
   }
   
   $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
+    $(this).find('img').not(".no-fancybox").each(function(){
       if ($(this).parent().hasClass('fancybox')) return;
       var alt = this.alt;
       if (alt) $(this).after('<span class="caption">' + alt + '</span>');
